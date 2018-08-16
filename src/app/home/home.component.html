@@ -1,37 +1,19 @@
-<div>
-  <h1 x-large class="sample-content">Your Content Here</h1>
+<div class="container">
+  <div class="header"></div>
+  <div class="main-section">
+    <form>
+      <input type="text" name="input1" [style.border]="'1px solid black'" (focus)="globalService.doInputFocusFunc()"><br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis turpis posuere ullamcorper placerat. Nunc at erat lectus. Nullam sit amet sem ut risus porta porttitor eget sed mauris. Donec ac pulvinar nibh. Phasellus luctus risus eu dignissim suscipit. Nunc vitae risus ut sem interdum pharetra. Donec auctor orci nulla, nec pharetra neque ullamcorper vitae. Nulla vitae blandit augue. Donec magna magna, pharetra vel nisl in, hendrerit mollis urna.
 
-  <hr>
-
-  <div>
-    For hot module reloading run
-    <pre>npm run start:hmr</pre>
-  </div>
-
-  <hr>
-
-  <div>
-    <h4>Local State</h4>
-
-    <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
-
-      <input
-        [value]="localState.value"
-        (input)="localState.value = $event.target.value"
-        placeholder="Submit Local State to App State"
-        autofocus>
-
-      <button>Submit Value</button>
+        Sed sagittis mattis tellus eget posuere. Phasellus pellentesque fringilla magna eu tempus. Pellentesque condimentum, lacus eget laoreet finibus, leo eros ornare magna, eu auctor nulla sapien vitae quam. Suspendisse ut sodales odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque iaculis nec velit vitae dictum. Aliquam risus purus, dignissim sit amet mollis non, pharetra vitae eros.
+        
+        Phasellus gravida placerat orci, in congue velit posuere ac. Proin urna turpis, mattis nec nisl et, porta sodales risus. Vestibulum vulputate mauris ut bibendum sollicitudin. Mauris vitae massa quis nisl rutrum lacinia. Duis congue lorem risus, ac pretium odio efficitur vel. Curabitur non tempus eros, id fermentum justo. Nullam eget nisi eget nisi vulputate auctor non sagittis ipsum. Mauris a elit diam.
+        
+        Suspendisse vehicula imperdiet quam, tempus volutpat est luctus eu. Morbi varius mi in neque pulvinar ullamcorper. Praesent iaculis tincidunt arcu. Nullam porta, massa eu maximus tempor, ante felis porta lectus, at consectetur nulla metus at ipsum. Donec eget porttitor sapien, quis bibendum felis. Suspendisse vel rutrum massa. Nam varius rhoncus placerat.
+        
+        Vivamus vitae magna pellentesque, consectetur odio volutpat, mollis sapien. Sed suscipit metus urna. Nullam eleifend luctus efficitur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce commodo nibh vel dolor commodo malesuada. Praesent eget cursus justo, ut gravida metus. Proin mauris velit, faucibus non sapien ullamcorper, pharetra eleifend leo. Duis rutrum, urna ac volutpat ullamcorper, eros mi finibus est, ut vehicula nisl purus sed eros.</p>
+        <input type="text" name="input2" [style.border]="'1px solid black'"(focus)="globalService.doInputFocusFunc()"><br>
+        <input type="submit" value="Submit" [style.border]="'1px solid black'" (click)="submitForm($event)">
     </form>
-    <!--
-        <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
-        Rather than wiring up two-way data-binding ourselves with [value] and (input)
-        we can use Angular's [(ngModel)] syntax
-        <input type="text" name="textInput" [(ngModel)]="localState.value" autofocus>
-      -->
-
-    <pre>this.localState = {{ localState | json }}</pre>
-
   </div>
-
 </div>

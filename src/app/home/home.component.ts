@@ -7,6 +7,8 @@ import { AppState } from '../app.service';
 import { Title } from './title';
 import { XLargeDirective } from './x-large';
 
+import { GlobalService } from '../services/global.service';
+
 @Component({
   /**
    * The selector is what angular internally uses
@@ -39,7 +41,8 @@ export class HomeComponent implements OnInit {
    */
   constructor(
     public appState: AppState,
-    public title: Title
+    public title: Title,
+    public globalService: GlobalService
   ) {}
 
   public ngOnInit() {
